@@ -1,0 +1,287 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.2.43",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_texture_transform"
+    ],
+    "extensionsRequired" : [
+        "KHR_texture_transform"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Sphere",
+            "rotation" : [
+                0.2369084358215332,
+                -0.6509473919868469,
+                -0.6806825995445251,
+                0.2383548617362976
+            ],
+            "translation" : [
+                1.1158100366592407,
+                0.23964187502861023,
+                -0.07954879105091095
+            ]
+        },
+        {
+            "children" : [
+                0
+            ],
+            "mesh" : 1,
+            "name" : "Plane_16",
+            "rotation" : [
+                0.5,
+                0.5,
+                -0.5,
+                0.5
+            ],
+            "translation" : [
+                -0.09926408529281616,
+                0.08267152309417725,
+                0.4217873513698578
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Beef Steak",
+            "normalTexture" : {
+                "index" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "metallicRoughnessTexture" : {
+                    "index" : 2
+                }
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "6*FRONT",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "extensions" : {
+                        "KHR_texture_transform" : {
+                            "offset" : [
+                                0,
+                                -1
+                            ]
+                        }
+                    },
+                    "index" : 3
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.4343145787715912
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Sphere",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Mesh.048",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        },
+        {
+            "sampler" : 0,
+            "source" : 3
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Beaf_Steak_Normal",
+            "uri" : "Beaf_Steak_Normal.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Beaf_Steak_Base_Color",
+            "uri" : "Beaf_Steak_Base_Color.jpg"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Beaf_Steak_Roughness",
+            "uri" : "Beaf_Steak_Roughness.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Left-01",
+            "uri" : "Left-01.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 728,
+            "max" : [
+                0.04643850028514862,
+                0.6394732594490051,
+                0.050124891102313995
+            ],
+            "min" : [
+                -0.04772159457206726,
+                -0.34299716353416443,
+                -0.043159641325473785
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 728,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 728,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 3840,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 2417,
+            "max" : [
+                0.6773087382316589,
+                0.044352803379297256,
+                1.1572799682617188
+            ],
+            "min" : [
+                -0.6790708303451538,
+                -0.05815529823303223,
+                -1.2468770742416382
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 2417,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 2417,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 13920,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 8736,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8736,
+            "byteOffset" : 8736
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 5824,
+            "byteOffset" : 17472
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7680,
+            "byteOffset" : 23296
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 29004,
+            "byteOffset" : 30976
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 29004,
+            "byteOffset" : 59980
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 19336,
+            "byteOffset" : 88984
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 27840,
+            "byteOffset" : 108320
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 136160,
+            "uri" : "Froq file with hero.bin"
+        }
+    ]
+}

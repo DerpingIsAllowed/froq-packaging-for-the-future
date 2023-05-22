@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This section defines the metadata of the document such as title, character set, and viewport -->
+    <meta charset="utf-8">
+    <title>Froq products</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../files/favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <!-- This section imports fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- This section defines the body of the document -->
+
+<body>
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+    <!-- This script defines an import map for JavaScript modules -->
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "../three.js/build/three.module.js",
+                    "three/addons/": "./three.js/examples/jsm/"
+				}
+			}
+		</script>
+    <script type="module" src="main.js"></script>
+    <div class="navigation">
+        <!-- Header -->
+        <nav class="left">
+            <a href="">Shop</a>
+            <a href="index.html">Products</a>
+            <a href="">Our story</a>
+        </nav>
+        <a href="index.html"><img class="logo" src="imagefiles\generic logo1.png"></a>
+        <nav class="right">
+            <a href="">Login</a>
+            <a href="">Register</a>
+            <a href="">Cart</a>
+        </nav>
+    </div>
+
+    <div class="flex-wrapper">
+        <!-- list of products -->
+        <script type="module" src="productOverview.js"></script>
+        <section id="shop" class="section">
+            <div class="shopcontainer">
+                <div class="productCard">
+                    <div class="productImage zoom">
+                        <img class="unselectable" src="imagefiles/packshot-ish(square).png" alt="productImage">
+                    </div>
+                    <div class="productInfoCard">
+                        <div class="productPricesRoot unselectable">
+                            <h3>control page</h3>
+                            <p class="price">€6,90</p>
+                        </div>
+                        <a href="control product Image.html" class="button">SHOW ME!!!</a>
+                    </div>
+                </div>
+                <div class="productCard">
+                    <div class="productImage zoom">
+                        <img class="unselectable" data-product-Model="Froq file with hero.gltf,0,-0.1,0,1.5"
+                            src="imagefiles/3D thumbnail.png" alt="productImage">
+                    </div>
+                    <div class="productInfoCard">
+                        <div class="productPricesRoot unselectable">
+                            <h3>3d display subsitute</h3>
+                            <p class="price">€6,90</p>
+                        </div>
+                        <a href="product Image.html" class="button">SHOW ME!!!</a>
+                    </div>
+                </div>
+                <div class="productCard">
+                    <div class="productImage zoom">
+                        <img class="unselectable" data-product-Model="Froq file with animation V1.gltf,0,-1,0,.75"
+                            src="imagefiles/scroll.png" alt="productImage">
+                    </div>
+                    <div class="productInfoCard">
+                        <div class="productPricesRoot unselectable">
+                            <h3>long scroll display</h3>
+                            <p class="price">€200</p>
+                        </div>
+                        <a href="product animation.html" class="button">SHOW ME!!!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- this is where the invisible 3d canvas hides on startup, this makes sure it loads but isnt visible to the user! -->
+    <div class="invisible">
+        <div id="FrameJS-wrapper" class="canvasWrapperStyler">
+            <div class="canvasWrapper">
+                <canvas id="FrameJS" class="canvas"></canvas>
+            </div>
+        </div>
+    </div>
+</body>

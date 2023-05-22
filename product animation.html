@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This section defines the metadata of the document such as title, character set, and viewport -->
+    <meta charset="utf-8">
+    <title>Froq Home-Page</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../files/favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <!-- This section imports fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- This section defines the body of the document -->
+
+<body>
+    <div class="display-wrapper" id="bodywrapper">
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+    <!-- This script defines an import map for JavaScript modules -->
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "../three.js/build/three.module.js",
+                    "three/addons/": "./three.js/examples/jsm/"
+				}
+			}
+		</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+        <div class="display">
+            <script type="module" src="productPageAnimation.js"></script>
+            <div class="scroll-label">Scroll to Explore</div>
+        </div>
+        
+        <!-- This section defines the navigation bar of the webpage -->
+        <div class="navigation">
+            <!-- Header -->
+            <nav class="left">
+                <a href="">Shop</a>
+                <a href="index.html">Products</a>
+                <a href="">Our story</a>
+            </nav>
+            <a href=""><img class="logo" src="imagefiles\generic logo1.png"></a>
+            <nav class="right">
+                <a href="">Login</a>
+                <a href="">Register</a>
+                <a href="">Cart</a>
+            </nav>
+        </div>
+        <div class="productPageAnimation-background">
+            <!-- this is where the 3d element script gets loaded, in the data-product-Model -->
+
+            <div class="filler">
+                <div class="canvasWrapperStylerProductPageAnimation">
+                    <div class="canvasWrapper">
+                        <canvas id="FrameJS" class="canvas"
+                            data-product-Model="Froq file with animation V1.gltf,0,-.5,-.2,.48"
+                            data-scene-position="0,2,2.75"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- spacers are used to dynamically generate hight between the information elements to let as scrol more freely -->
+        <div class="spacer" data-spacing="30vh"></div>
+
+        <!-- more product information -->
+        <div class="glass productPageAnimation-left">
+            <H1 title="productTitle">
+                Dried sausages
+            </H1>
+
+            <p class="price">€6,90</p>
+            <div class="rating">
+                <span>☆</span>
+                <span>☆</span>
+                <span>☆</span>
+                <span>☆</span>
+                <span>☆</span>
+                <p> 4 reviews</p>
+            </div>
+            <div class="button">
+                <a href="">Add to cart</a>
+            </div>
+
+            <p class="description">
+            <p>
+                Our vegan salami is made from a blend of plant-based protein sources and infused with the
+                natural smoky flavor from beechwood.
+            </p>
+            <p class="bold"> </p>
+            <br>
+            <ul>
+                <li> The ideal snack for on-the-go</li>
+                <li> Seven pieces, one for every day of the week</li>
+                <li> With garlic, peppercorns, and coriander seeds</li>
+                <li> No added flavor enhancers or colorants</li>
+            </ul>
+            </p>
+
+
+        </div>
+        <div class="spacer" data-spacing="25vh"></div>
+
+        <!-- even more product information -->
+        <div class="glass productPageAnimation-right">
+            <H2>description</H2>
+            <p class="Description">
+                Enjoy our vegan smoked dry sausage, made with plant-based ingredients and packed in a protective
+                atmosphere for optimal freshness.
+            </p>
+            <br>
+            <H3 class="contents">contents</H3>
+
+            <p>
+            <ul>
+                <li>7 pieces. 140 grams</li>
+                <li>7 x 20g</li>
+            </ul>
+            </p>
+
+            <h3>features</h3>
+            <ul class="feature-list">
+                <li>
+                    <img src="imagefiles/vegan-stamp.png" alt="vegan stamp logo">
+                    <p>vegan</p>
+                </li>
+                <li>
+                    <img src="imagefiles/we-recycle.png" alt="recycleable logo">
+                    <p>recycleable</p>
+                </li>
+            </ul>
+
+            <h2>ingredients</h2>
+            <div class="ingredients">
+                Textured vegetable proteins (isolated <p class="bold"> soy </p> proteins, defatted <p class="bold"> soy
+                </p> flour, <p class="bold"> wheat </p> proteins, corn starch),
+                pea powder, iodized salt (salt, potassium iodate), dextrose, spices (pepper, coriander, garlic),
+                antioxidant (sodium ascorbate), preservative (sodium nitrite), beechwood smoke.
+            </div>
+        </div>
+
+
+        <div class="spacer" data-spacing="5vh"></div>
+    </div>
+</body>

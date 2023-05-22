@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px red solid; */
+
+    /* colors */
+    --color-primary-full: #1900ff;
+    --color-primary-accent: #e65151;
+    --color-background: #F0F0FA;
+    --color-white: #F0F0FA;
+    --color-black: #101010;
+}
+
+body {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("/imagefiles/bg6.jpeg");
+    background-color: var(--color-background);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    backdrop-filter: blur(5px);
+
+    min-height: 100vh;
+}
+
+.scroll-label {
+    position: fixed;
+    top: 90vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 25px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.flex-wrapper {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 6.5vw;
+    padding-right: 6.5vw;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    flex-grow: 1;
+}
+
+.left {
+    justify-content: left;
+    padding-left: 6.5vw;
+
+}
+
+.right {
+    justify-content: right;
+    padding-right: 6.5vw;
+}
+
+nav a {
+    padding-left: 1.8vw;
+    padding-right: 1.8vw;
+}
+
+a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--color-black);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a .logo {
+    padding-top: 1.3em;
+    width: 8em;
+}
+
+ul {
+    margin-left: 20px;
+    /* adjust the margin as needed */
+}
+
+.feature-list {
+    margin-top: .8em;
+    list-style: none;
+    /* Remove default bullet point */
+    flex-wrap: wrap;
+    /* Wrap items to next line when there's not enough space */
+    justify-content: flex-start;
+    /* Align items to the left */
+}
+
+/* Style for each feature item */
+.feature-list li {
+    margin-right: 20px;
+    /* Add some space between items */
+    margin-bottom: 10px;
+    /* Add some space between rows */
+    display: flex;
+    /* Display items as a flex container */
+    align-items: center;
+    /* Align items to the center vertically */
+}
+
+/* Style for the image in each feature item */
+.feature-list li img {
+    width: 30px;
+    /* Set the image width */
+    height: 30px;
+    /* Set the image height */
+    margin-right: 15px;
+    /* Add some space between the image and the text */
+}
+
+
+.halfColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 50%;
+    height: 100%;
+}
+
+.productPageRoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.productInfo {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+h1 {
+    font-family: 'Bebas Neue', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+/* H2 */
+h2 {
+    font-family: 'Bebas Neue', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* H3 */
+h3 {
+    font-family: 'Bebas Neue', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+/* H4 */
+h4 {
+    font-family: 'Bebas Neue', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+
+h1::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2px;
+    background-color: var(--color-primary-accent);
+    margin-top: .5em;
+}
+
+.productTitle {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.veganStamp {
+    margin-left: 10px;
+    /* adjust as needed */
+    height: 24px;
+    /* adjust as needed */
+}
+
+.bottom {
+    width: 62%;
+    margin-bottom: 10em;
+}
+
+.price {
+    margin-top: 1em;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.rating {
+    display: flex;
+    margin-top: .5em;
+    font-size: 1.3em;
+    color: var(--color-black);
+    flex-direction: left;
+    flex: row;
+    align-items: baseline;
+}
+
+.rating p {
+    font-size: .65em;
+    width: fit-content;
+    margin-left: .5em;
+}
+
+.description {
+    padding-top: 2em;
+    font-size: .8em;
+    color: var(--color-black);
+    overflow-y: hidden;
+}
+
+.bold {
+    display: inline;
+    font-weight: 600;
+}
+
+/* button */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(calc(100%)-2px);
+    height: 40px;
+    background-color: unset;
+    border: 2px solid var(--color-black);
+    font-size: .8em;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-top: 1.5em;
+    cursor: pointer;
+    /* slow fade of color on hover */
+    transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--color-black);
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+}
+
+/* canvas */
+.canvas {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.canvasWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.canvasWrapperStyler {
+    width: 100%;
+    height: 100%;
+    max-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvasOverlay {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out, height 0.25s ease-in-out;
+    user-select: none;
+    /* glasmophism blur and borders */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    box-shadow: 0 4px 1px 5 rgba(31, 38, 135, 0.37);    
+}
+
+.canvasOverlay p {
+    font-size: 16px;
+}
+
+.canvasWrapper:hover .canvasOverlay {
+    opacity: 1;
+    cursor: pointer;
+    height: 100%;
+}
+
+
+#shop {
+    flex: 1 1;
+    flex-wrap: wrap;
+    height: fit-content;
+    display: flex;
+}
+
+.shopcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 1.4%;
+    justify-content: center;
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+}
+
+.shopcontainer>* {
+    margin: 1.4%;
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 18rem;
+    padding: 2em;
+    /* background-color: var(--color-white); */
+    /* add blur */
+    backdrop-filter: blur(10px);
+    /* add transparency */
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+
+.unselectable {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.productImage img {
+    width: 100%;
+}
+
+.productImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom {
+    transform: scale(1);
+    transition: transform .3s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    transition: transform .3s;
+}
+
+
+.productInfoCard {
+    align-items: left;
+}
+
+.productPricesRoot {
+    /* make all child stuff row */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.productPricesRoot>* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* productroot last child width is always fit content */
+.productPricesRoot p {
+    width: fit-content;
+
+}
+
+.productPricesRoot h3 {
+    width: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--color-black);
+}
+
+.invisible {
+    display: none;
+}
+
+
+/* product animation page ---------------------------------------*/
+.filler {
+    height: 100%;
+    max-height: 100svh;
+    position: sticky;
+    top: 0;
+    z-index: -100;
+}
+
+.canvasWrapperStylerProductPageAnimation {
+    width: 100%;
+    max-width: 95vw;
+    height: 100%;
+    max-height: 100svh;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* glass morphism div */
+.glass {
+    background: rgba(255, 255, 255, 0.175);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.175);
+}
+
+/* div positioned behind everything absolutely*/
+.productPageAnimation-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+.productPageAnimation-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: 6.5vw;
+}
+
+.productPageAnimation-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: 6.5vw;
+
+}
+
+.spacer {
+    width: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80%;
+    width: auto;
+    object-fit: contain;
+}
+
+#timer-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-bottom: -150px;
+}
+
+#timer-display {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #f0f0fa00;
+}
+
+button:first-child {
+    margin-right: 10px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
